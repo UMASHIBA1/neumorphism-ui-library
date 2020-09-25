@@ -1,6 +1,5 @@
 import React, { ReactNode } from "react";
 import styled, { FlattenSimpleInterpolation } from "styled-components";
-import { bgColor } from "../cssProps/colors";
 import { centerPutChildren } from "../cssProps/centerPutChildren";
 import { normalShadow } from "../cssProps/shadow";
 
@@ -12,9 +11,7 @@ interface Props {
 const Wrapper = styled.div<Props>`
   width: 300px;
   height: 160px;
-  margin: 12px;
   ${normalShadow(2)}
-  ${bgColor}
   ${centerPutChildren}
   ${({ cssProps }) => cssProps}
 `;

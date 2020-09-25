@@ -5,19 +5,27 @@ import InsetBox from "./examples/InsetBox";
 import NormalBox from "./examples/NormalBox";
 
 const Wrapper = styled.div`
-  display: grid;
-  justify-items: center;
-  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   width: 100%;
+  justify-content: center;
+  margin-top: 64px;
+  > * {
+    margin: 12px;
+  }
 `;
 const Home = () => {
   return (
     <Wrapper>
-      <NormalBox cssProps={radiusSm}>roundSm</NormalBox>
-      <NormalBox cssProps={radiusMd}>roundMd</NormalBox>
-      <NormalBox cssProps={radiusLg}>roundLg</NormalBox>
-      <NormalBox cssProps={radiusCircle}>roundCircle</NormalBox>
-      <InsetBox />
+      <NormalBox cssProps={radiusSm}>radiusSm</NormalBox>
+      <NormalBox cssProps={radiusMd}>radiusMd</NormalBox>
+      <NormalBox cssProps={radiusLg}>radiusLg</NormalBox>
+      <NormalBox cssProps={radiusCircle}>radiusCircle</NormalBox>
+      <InsetBox cssProps={radiusSm}>radiusSM</InsetBox>
+      <InsetBox cssProps={radiusMd}>radiusMd</InsetBox>
+      <InsetBox cssProps={radiusLg}>radiusLg</InsetBox>
+      <InsetBox cssProps={radiusCircle}>radiusCircle</InsetBox>
     </Wrapper>
   );
 };
