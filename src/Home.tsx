@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import InsetBox from "./examples/InsetBox";
+import NormalBox from "./examples/NormalBox";
 
 const Wrapper = styled.div`
   display: grid;
@@ -10,8 +12,8 @@ const Wrapper = styled.div`
 const Home = () => {
   return (
     <Wrapper>
-      {/* dd */}
-      {/* dd */}
+      <NormalBox />
+      <InsetBox />
     </Wrapper>
   );
 };
